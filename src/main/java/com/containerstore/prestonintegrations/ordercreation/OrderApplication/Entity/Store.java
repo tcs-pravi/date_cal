@@ -12,8 +12,6 @@ import lombok.Data;
 public class Store {
 
     @Id
-    @GeneratedValue
-    private int store_id;
     private String store_code;
     private String store_number;
     private Long store_phone;
