@@ -29,25 +29,6 @@ public class BackwardDateCalculator {
             }
             Date = Date.minusDays(1);
 
-
-//        LocalDateTime date = LocalDateTime.now();
-//
-//        var lst = prestonHolidayRepository.findAllDates();
-//
-//        for(int i = 0; i <= totalNumberOfDays; i++){
-//            if(date.getDayOfWeek().toString() == "SUNDAY" || date.getDayOfWeek().toString() == "SATURDAY"){
-//                i = i - 1;
-//                System.out.println(date);
-//            } else for(LocalDateTime x : lst){
-//                if(x.getDayOfYear() == date.getDayOfYear()){
-//                    i = i - 1;
-//                    System.out.println(date);
-//                }
-//            }
-//            date = date.plusDays(1);
-//
-//        }
-
         }
         return Date;
     }
