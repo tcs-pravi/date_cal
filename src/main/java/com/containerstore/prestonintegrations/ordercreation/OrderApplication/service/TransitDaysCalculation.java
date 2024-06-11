@@ -2,7 +2,9 @@ package com.containerstore.prestonintegrations.ordercreation.OrderApplication.se
 
 import com.containerstore.prestonintegrations.ordercreation.OrderApplication.repo.StoreRepository;
 import com.containerstore.prestonintegrations.ordercreation.OrderApplication.repo.ZipcodeTransitMappingRepository;
+import org.springframework.stereotype.Service;
 
+@Service
 public class TransitDaysCalculation {
     private  final ZipcodeTransitMappingRepository zipcodeTransitMappingRepository;
     private final StoreRepository storeRepository;
@@ -14,7 +16,7 @@ public class TransitDaysCalculation {
         this.storeRepository = storeRepository;
     }
 
-    private int calculateTransitDays(int zip,String StoreCode)
+    public int calculateTransitDays(int zip,String StoreCode)
     {
         if(storeRepository.findIsPickupByStoreCode(StoreCode) ) return 0;
 
